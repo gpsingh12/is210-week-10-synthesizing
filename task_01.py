@@ -28,7 +28,7 @@ for cust in ORDERS.itervalues():
     if cust['customer_id'] in dict1.keys():
         order1 = dict1[cust]['orders'] + 1
         total1 = dict1[cust]['total'] + [cust]['total']
-      else:
+    else:
         no_of_orders = 1
         order_total = [cust]['total']
       name1 = customers[keys]['name']
