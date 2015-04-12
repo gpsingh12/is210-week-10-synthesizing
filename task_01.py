@@ -31,12 +31,12 @@ for cust in ORDERS.itervalues():
     else:
         no_of_orders = 1
         order_total = [cust]['total']
-      name1 = customers[keys]['name']
-      email1 = customers[keys]['email']
-      dict2 = (name = name1 , email = email1, orders = order1, total = total1)
-      dict2 = dict(dict2)
+        name1 = customers[keys]['name']
+        email1 = customers[keys]['email']
+        dict2 = (name = name1, email = email1, orders = order1, total = total1)
+        dict2 = dict(dict2)
       
-      dict1.update(dict2)
+    dict1.update(dict2)
 
 return dict1        
         
