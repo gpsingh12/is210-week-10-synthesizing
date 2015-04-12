@@ -1,6 +1,7 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """Combining two datasets using dictionaries """
+
 
 def sum_orders(customers, orders):
     """Function takes two parameters customers and orders and combine
@@ -20,26 +21,21 @@ def sum_orders(customers, orders):
                       4: {'customer_id': 3, 'total': 15}}
                   >>>
 
-    """
-    
+    """    
 dict1 = {}
 for cust in ORDERS.itervalues():
-      keys = cust['customer_id']
-      if cust['customer_id'] in dict1.keys():
-            order1 = dict1[cust]['orders'] + 1
-            total1 = dict1[cust]['total'] + [cust]['total']
+    keys = cust['customer_id']
+    if cust['customer_id'] in dict1.keys():
+        order1 = dict1[cust]['orders'] + 1
+        total1 = dict1[cust]['total'] + [cust]['total']
       else:
-            no_of_orders = 1
-            order_total = [cust]['total']
+        no_of_orders = 1
+        order_total = [cust]['total']
       name1 = customers[keys]['name']
       email1 = customers[keys]['email']
       dict2 = (name = name1 , email = email1, orders = order1, total = total1)
       dict2 = dict(dict2)
       
-            
-            
-           
-           
       dict1.update(dict2)
 
 return dict1        
