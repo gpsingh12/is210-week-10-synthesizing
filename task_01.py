@@ -24,7 +24,6 @@ def sum_orders(customers, orders):
     """    
 dict1 = {}
 for cust in ORDERS.itervalues():
-    keys = cust['customer_id']
     if cust['customer_id'] in dict1.keys():
         order1 = dict1[cust]['orders'] + 1
         total1 = dict1[cust]['total'] + [cust]['total']
@@ -33,10 +32,6 @@ for cust in ORDERS.itervalues():
         order_total = [cust]['total']
         name1 = customers[keys]['name']
         email1 = customers[keys]['email']
-        dict2 = (name = name1, email = email1, orders = order1, total = total1)
-        dict2 = dict(dict2)
-      
-    dict1.update(dict2)
 
 return dict1        
         
