@@ -22,15 +22,17 @@ def sum_orders(customers, orders):
                   >>>
 
     """
-dict1 = {}
-for cust in orders.itervalues():
-    if cust['customer_id'] in dict1.keys():
-        order1 = dict1[cust]['orders'] + 1
-        total1 = dict1[cust]['total'] + [cust]['total']
-    else:
-        no_of_orders = 1
-        order_total = [cust]['total']
-        name1 = customers[somekey]['name']
-        email1 = customers[somekey]['email']
+    dict1 = {}
+    for cust in orders.itervalues():
+        somekey = cust['customer_id']
+        if somekey in dict1.keys():
+            keys = cust['customer_id']
+            order = dict1[cust]['orders'] + 1
+            total = dict1[cust]['total'] + [cust]['total']
+        else:
+            no_of_orders = 1
+            order_total = cust['total']
+            name = customers[keys]['name']
+            email = customers[keys]['email']
 
-return dict1
+    return dict1
