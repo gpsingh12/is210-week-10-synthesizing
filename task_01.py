@@ -14,7 +14,7 @@ def sum_orders(customers, orders):
             returns a new dictionary combined with the keys and containing
             data from two dictionaries.
       Examples:
-                CUSTOMERS = {2: {'name': 'Person One', 'email': 'email@one.com'},
+            CUSTOMERS = {2: {'name': 'Person One', 'email': 'email@one.com'},
                       5: {'name': 'Person Two', 'email': 'email@two.com'}}
                   ORDERS = {1: {'customer_id': 2, 'total': 10},
                       3: {'customer_id': 2, 'total': 10},
@@ -26,13 +26,13 @@ def sum_orders(customers, orders):
     for cust in orders.itervalues():
         somekey = cust['customer_id']
         if somekey in dict1.keys():
-            keys = cust['customer_id']
+        
             order = dict1[cust]['orders'] + 1
             total = dict1[cust]['total'] + [cust]['total']
         else:
             no_of_orders = 1
             order_total = cust['total']
-            name = customers[keys]['name']
-            email = customers[keys]['email']
+            name = customers[somekey]['name']
+            email = customers[somekey]['email']
 
     return dict1
